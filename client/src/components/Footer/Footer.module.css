@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 0.85rem;
+  color: #848d9a;
+  border-top: 1px solid #222938;
+  gap: 16px;
+}
+
+.techLogos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.techLogo {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.techLogo:hover {
+  opacity: 1;
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВА */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column; /* Элементы футера встают друг под друга */
+    text-align: center;
+    padding: 20px 0 30px 0;
+  }
+}

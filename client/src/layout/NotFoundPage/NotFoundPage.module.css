@@ -1,0 +1,161 @@
+/* Принудительно красим фон самого документа, чтобы убрать светлый оттенок */
+:global(body) {
+    margin: 0;
+}
+
+/* Настройка контейнера страницы */
+.landingContainer {
+    color: #ffffff !important;
+    min-height: 100vh;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-sizing: border-box;
+}
+
+/* Главный блок контента */
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 40px 0;
+    gap: 40px;
+}
+
+.heroContent {
+    max-width: 550px;
+}
+
+/* Белый заголовок "Страница не найдена" */
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 24px 0;
+    letter-spacing: -1px;
+    color: #ffffff !important;
+}
+
+/* Фиолетовый текст "не найдена" */
+.accentText {
+    color: #a394ff !important;
+}
+
+/* Серый подзаголовок */
+.heroSubtitle {
+    color: #7e8b9b !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0 40px 0;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 16px;
+}
+
+/* Базовый класс кнопки из classnames */
+.btn {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    padding: 12px 26px !important; /* Задаем размер */
+    border-radius: 8px !important; /* Скругляем углы */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* Специфичный класс кнопки из classnames, который сделает её серой */
+.btnPrimary {
+    background-color: #141c2f !important; /* Цвет как у кнопок в шапке */
+    background: #141c2f !important;
+    color: #ffffff !important;
+    border: 1px solid #222938 !important; /* Тонкая серая рамка */
+}
+
+/* Эффект наведения */
+.btnPrimary:hover {
+    background-color: #1e2942 !important;
+    border-color: #313d5a !important;
+}
+
+/* Вытравливаем синий цвет из ссылки NavLink, которая лежит внутри кнопки */
+.btnPrimary a,
+.btnPrimary a:link,
+.btnPrimary a:visited,
+.btnPrimary a:hover,
+.btnPrimary a:active {
+    color: #ffffff !important; /* Делаем текст ссылки белым */
+    text-decoration: none !important; /* Убираем синее подчеркивание */
+    background-color: transparent !important;
+    background: transparent !important;
+    display: inline-block !important;
+}
+
+/* Блок картинки */
+.heroImageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+/* АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ */
+@media (max-width: 992px) {
+    .landingContainer {
+        padding: 0 5%;
+    }
+    .heroSection {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    .heroContent {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heroTitle {
+        font-size: 2.8rem;
+    }
+    .ctaGroup {
+        justify-content: center;
+        width: 100%;
+    }
+    .heroImageContainer {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+    .btn {
+        width: 100% !important;
+    }
+}
