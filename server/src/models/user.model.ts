@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    refreshToken: {
+        type: String,
+        required: true
+    },
     dRating: {
         type: Number,
         required: true,
@@ -24,7 +28,16 @@ const userSchema = new mongoose.Schema({
     },
     pRating: {
         type: Number,
+        required: true,
+        default: NaN
+    },
+    verified: {
+        type: Boolean,
         required: true
+    },
+    verificationToken: {
+        type: String,
+        required: false
     }
 }, {
     timestamps: true

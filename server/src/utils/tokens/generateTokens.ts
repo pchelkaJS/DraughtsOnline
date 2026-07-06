@@ -9,3 +9,5 @@ function generateTokens(id: string) {
     })
     return { accessToken, refreshToken }
 }
+
+export { generateTokens }
