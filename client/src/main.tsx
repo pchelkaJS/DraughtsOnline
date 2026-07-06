@@ -1,9 +1,9 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import GreetingsPage from './layout/GreetingsPage/GreetingsPage'
 import NotFoundPage from './layout/NotFoundPage/NotFoundPage'
+import { StrictMode } from 'react'
 
 // Настройка путей (роутов) приложения
 const router = createBrowserRouter([
@@ -25,5 +25,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <RouterProvider router={router} />
-    </StrictMode>,
+    </StrictMode>
 )
