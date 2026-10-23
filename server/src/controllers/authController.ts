@@ -4,7 +4,7 @@ import { generateTokens } from '../utils/tokens/generateTokens'
 import { sendVerification } from '../utils/verification/sendVerification'
 import type { Request, Response } from 'express'
 
-class Auth {
+export default class Auth {
     static async register(req: Request, res: Response) {
         const errors = {
             name: 'The name must contain only letters and numbers and be at least 3 characters long.',

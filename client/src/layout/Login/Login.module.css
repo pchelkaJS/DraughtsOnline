@@ -218,3 +218,8 @@
     width: 100% !important;
   }
 }
+
+.linkBlue{
+  color: var(--primary-color);
+  text-decoration: none;
+}

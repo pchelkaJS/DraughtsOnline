@@ -1,18 +1,14 @@
 import express from "express"
+import Auth from "./../controllers/authController"
+import { isURL } from "validator"
 
 const router = express.Router()
 
-router.post("/register", (req, res) => {
-    try{
-        const { username, password, email } = req.body;
+function api(url: string){
+    return `/api/${url}`
+}
 
-        if (!username || !password || !email || !email.includes("@") || !email.includes(".com")) {
-          return res.status(400).json({ message: "Некорректные данные для регистрации" });
-        }
-
-    } catch (err){
-        res.status(500).send(err)
-    }    
-})
+router.get(api("/login"), Auth.login)
+router.post(api("/register"), Auth.register)
 
 export default router

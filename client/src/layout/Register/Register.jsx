@@ -27,7 +27,7 @@ export default function Register() {
                 Регистрация
               </button>
               <span>
-                Уже есть аккаунт?<NavLink to="/login"> Авторизуйтесь.</NavLink>
+                Уже есть аккаунт?<NavLink to="/login" ><span className = {cn(styles.linkBlue)}> Авторизуйтесь.</span></NavLink>
               </span>
             </form>
           </div>

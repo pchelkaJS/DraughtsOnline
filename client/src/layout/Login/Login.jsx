@@ -21,7 +21,7 @@ export default function Login() {
               <button className={cn(styles.submitBtn, styles.btnPrimary)}>
                 Вход
               </button>
-              <span>Нет аккаунта?<NavLink to="/register"> Зарегистрируйтесь.</NavLink></span>
+              <span>Нет аккаунта?<NavLink to="/register"><span className = {cn(styles.linkBlue)}> Зарегистрируйтесь.</span></NavLink></span>
             </form>
           </div>
         </div>
